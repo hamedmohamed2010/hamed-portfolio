@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>حامد محمد خليل</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="animated-name fade-in">حامد محمد خليل</h1>
+
+    <p class="description fade-in">
+      أهلاً بكم في موقعي الشخصي! أنا حامد محمد خليل، شغوف بالتقنية والتصميم. 
+      أحب العمل على مشاريع إبداعية ومفيدة.
+    </p>
+
+    <div class="contact fade-in">
+      <p>📞 رقم الهاتف: 0123456789</p>
+      <p>📧 البريد الإلكتروني: hamed@example.com</p>
+    </div>
+
+    <div class="gallery fade-in">
+      <img src="images/happy1.jpg" alt="صورة مبهجة">
+      <img src="images/happy2.jpg" alt="صورة مبهجة">
+      <img src="images/happy3.jpg" alt="صورة مبهجة">
+    </div>
+
+    <a href="https://wa.me/20123456789" class="whatsapp" target="_blank">💬 تواصل واتساب</a>
+  </div>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.3 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
