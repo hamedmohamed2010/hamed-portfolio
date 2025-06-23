@@ -3,54 +3,60 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>حامد محمد خليل</title>
-  <link rel="stylesheet" href="style.css">
+  <title>عنّي - حامد محمد خليل</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+      color: #1a237e;
+      font-family: 'Cairo', sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #0d47a1;
+    }
+    p {
+      font-size: 1.4rem;
+      line-height: 2;
+      max-width: 800px;
+      margin: auto;
+    }
+    .contact {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #01579b;
+    }
+    .whatsapp {
+      margin-top: 30px;
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.3rem;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-  
-<div class="nav fade-in">
-  <a href="about.html">عنّي</a> |
-  <a href="projects.html">مشاريعي</a> |
-  <a href="contact.html">اتصل بي</a>
-</div>
 
-    <h1 class="animated-name fade-in">حامد محمد خليل</h1>
+  <h1>حامد محمد خليل</h1>
+  <p>
+    مرحبًا بكم في عالمي الإبداعي! 👨‍💻<br>
+    أنا <strong>حامد محمد خليل</strong>، مطور ومصمم شغوف بالتقنية، أعمل على تحويل الأفكار إلى واقع مذهل.<br>
+    أمتلك خبرة في بناء مواقع إلكترونية جذابة وسهلة الاستخدام، وأهتم بأدق التفاصيل التي تترك انطباعًا احترافيًا لدى الزائر.<br>
+    أحب التحديات، وأسعى دائمًا للتطور ومساعدة الآخرين في تحقيق أهدافهم الرقمية.<br>
+    عملي يجمع بين الجمال في التصميم والقوة في البرمجة، لأصنع لك تجربة لا تُنسى على الويب.
+  </p>
 
-    <p class="description fade-in">
-      أهلاً بكم في موقعي الشخصي! أنا حامد محمد خليل، شغوف بالتقنية والتصميم. 
-      أحب العمل على مشاريع إبداعية ومفيدة.
-    </p>
-
-    <div class="contact fade-in">
-      <p>📞 رقم الهاتف: 01028458260</p>
-      <p>📧 البريد الإلكتروني: hamedtop375@gmail.com</p>
-    </div>
-
-    <div class="gallery fade-in">
-      <img src="images/happy1.jpg" alt="صورة مبهجة">
-      <img src="images/happy2.jpg" alt="صورة مبهجة">
-      <img src="images/happy3.jpg" alt="صورة مبهجة">
-    </div>
-
-    <a href="https://wa.me/201028458260" class="whatsapp" target="_blank">💬 تواصل واتساب</a>
+  <div class="contact">
+    📞 رقم الهاتف: 01028458260 <br>
+    📧 البريد الإلكتروني: hamedtop375@gmail.com
   </div>
 
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.3 };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, appearOptions);
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
-  </script>
+  <a class="whatsapp" href="https://wa.me/201028458260" target="_blank">تواصل واتساب</a>
+
 </body>
 </html>
